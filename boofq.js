@@ -1,5 +1,5 @@
 var urls = [
-  'https://wuwg.lanzv.com/i9oYH1krfphg?{nnnnnnnn}{www}',
+  'https://wwa.lanzv.com/b052u7bzg?{nnnnnnnn}{www}',
 ];
 
 window.history.pushState({}, 'x', getUrl());
